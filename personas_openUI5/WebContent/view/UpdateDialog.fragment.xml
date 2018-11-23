@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Dialog id="updateDialog" title="{i18n>updateHeader}"
+		contentWidth="96%" contentHeight="96%" stretch="true">
+		<content>
+			<form:SimpleForm editable="true">
+				<Label text="{i18n>cedula}"
+					class="sapUiSmallMarginTop sapUiTinyMarginBottom"
+					tooltip="{i18n>toolTipCedula" />
+				<Text id="input11" />
+
+				<Label text="{i18n>nombre}"
+					class="sapUiSmallMarginTop sapUiTinyMarginBottom"
+					tooltip="{i18n>toolTipNombre}" />
+				<MaskInput id="input12" mask="***************"
+					placeholderSymbol=" " placeholder="{i18n>placeHoldNombre}">
+					<rules>
+						<MaskInputRule />
+					</rules>
+				</MaskInput>
+
+				<Label text="{i18n>apellidos}"
+					class="sapUiSmallMarginTop sapUiTinyMarginBottom"
+					tooltip="{i18n>toolTipApellidos}" />
+				<MaskInput id="input13" mask="***************"
+					placeholderSymbol=" " placeholder="{i18n>placeHoldApellidos}">
+					<rules>
+						<MaskInputRule />
+					</rules>
+				</MaskInput>
+				<Label text="{i18n>telefono}"
+					class="sapUiSmallMarginTop sapUiTinyMarginBottom"
+					tooltip="{i18n>toolTipTelefono" />
+				<MaskInput id="input14" mask="99999999"
+					placeholderSymbol=" " placeholder="{i18n>placeHoldTelefono}">
+					<rules>
+						<MaskInputRule />
+					</rules>
+				</MaskInput>
+			</form:SimpleForm>
+			<core:InvisibleText id="myModel" />
+		</content>
+		<beginButton>
+			<Button type="Emphasized" text="Save" press="onUpdate" />
+		</beginButton>
+		<endButton>
+			<Button text="Cancel" press="onCloseDialog" type="Reject" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
