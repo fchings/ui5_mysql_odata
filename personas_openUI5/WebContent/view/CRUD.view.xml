@@ -5,11 +5,11 @@
 	xmlns:f="sap.ui.layout.form" controllerName="e2e.ui5.controller.CRUD">
 	<App>
 		<pages>
-			<Page title="{i18n>pageTitle}">
+			<Page title="{i18n>pageTitle}" >
 				<content>
 					<IconTabBar id="idTopLevelIconTabBar">
 						<items>
-							<IconTabFilter id="Tab1" text="{ i18n>cContent}">
+							<IconTabFilter id="Tab1" text="{i18n>cContent}">
 								<content>
 									<l:Grid vSpacing="2" defaultSpan="XL12 L12 M12 S12">
 										<VBox>
@@ -109,11 +109,11 @@
 										</columns>
 										<ColumnListItem type="action">
 											<cells>
-												<Text id="text1" text="{ cedula }" />
-												<Text id="text2" text="{ nombre }" />
-												<Text id="text3" text="{ apellidos }" />
-												<Text id="text4" text="{ telefono }" />
-												<Button icon="sap-icon: / user-edit"
+												<Text id="text1" text="{Cedula}" />
+												<Text id="text2" text="{Nombre}" />
+												<Text id="text3" text="{Apellidos}" />
+												<Text id="text4" text="{Telefono}" />
+												<Button icon="sap-icon://user-edit"
 													press="onOpenDialog" class="sapUiSmallMarginBottom" />
 												<Button icon="sap-icon://delete" press="onDelete"
 													class="sapUiSmallMarginBottom" />

@@ -7,8 +7,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 		},
 
 		_peopleTrim : function(p) {
-			return p.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,
-					").replace(/\s+/g,");
+			return p.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,").replace(/\s+/g,");
 		},
 
 		onAdd : function() {
@@ -22,10 +21,10 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 
 			} else {
 				var oEntry = {};
-				oEntry.cedula = this._peopleTrim(this.getView().byId("input01").getValue());
-				oEntry.nombre = this._peopleTrim(this.getView().byId("input02").getValue());
-				oEntry.apellidos = this._peopleTrim(this.getView().byId("input03").getValue());
-				oEntry.telefono = this._peopleTrim(this.getView().byId("input04").getValue());
+				oEntry.Cedula = this.getView().byId("input01").getValue();
+				oEntry.Nombre = this.getView().byId("input02").getValue();
+				oEntry.Apellidos = this.getView().byId("input03").getValue();
+				oEntry.Telefono = this.getView().byId("input04").getValue();
 
 				oModel.create('/Personas', oEntry, {
 					success : function(oData, oResponse) {
@@ -93,10 +92,10 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 			var path = src.getBindingContext().getPath();
 
 			var oData = oModel.getProperty(path);
-			var sCedula = oData['cedula'];
-			var sNombre = oData['nombre'];
-			var sApellidos = oData['apellidos'];
-			var sTelefono = oData['telefono'];
+			var sCedula = oData['Cedula'];
+			var sNombre = oData['Nombre'];
+			var sApellidos = oData['Apellidos'];
+			var sTelefono = oData['Telefono'];
 
 			if (!oDialog) {
 				oDialog = sap.ui.xmlfragment(oView.getId(),
