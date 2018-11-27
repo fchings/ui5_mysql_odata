@@ -9,7 +9,7 @@
 			<form:SimpleForm editable="true">
 				<Label text="{i18n>cedula}"
 					class="sapUiSmallMarginTop sapUiTinyMarginBottom"
-					tooltip="{i18n>toolTipCedula" />
+					tooltip="{i18n>toolTipCedula}" />
 				<Text id="input11" />
 
 				<Label text="{i18n>nombre}"
@@ -33,7 +33,7 @@
 				</MaskInput>
 				<Label text="{i18n>telefono}"
 					class="sapUiSmallMarginTop sapUiTinyMarginBottom"
-					tooltip="{i18n>toolTipTelefono" />
+					tooltip="{i18n>toolTipTelefono}" />
 				<MaskInput id="input14" mask="99999999"
 					placeholderSymbol=" " placeholder="{i18n>placeHoldTelefono}">
 					<rules>
