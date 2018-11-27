@@ -5,69 +5,69 @@
 	xmlns:f="sap.ui.layout.form" controllerName="e2e.ui5.controller.CRUD">
 	<App>
 		<pages>
-			<Page title="{i18n>pageTitle}" >
+			<Page title="{i18n>pageTitle}">
 				<content>
-					<IconTabBar id="idTopLevelIconTabBar">
+					<IconTabBar id="idTopLevelIconTabBar"
+						select="handleIconTabBarSelect"
+						class="sapUiResponsiveContentPadding">
 						<items>
-							<IconTabFilter id="Tab1" text="{i18n>cContent}">
+							<IconTabFilter id="Tab1" text="{i18n>cContent}"
+								icon="sap-icon://add" iconColor="Positive">
 								<content>
-									<l:Grid vSpacing="2" defaultSpan="XL12 L12 M12 S12">
-										<VBox>
-											<f:SimpleForm title="{i18n>formAdd}">
-												<Label text="{i18n>cedula}"
-													class="sapUiSmallMarginTopsapUiTinyMarginBottom"
-													tooltip="{i18n>toolTipCedula}" />
-												<MaskInput id="input01" mask="999999999"
-													placeholderSymbol=" " placeholder="{i18n>placeHoldCedula}">
-													<rules>
-														<MaskInputRule />
-													</rules>
-												</MaskInput>
+									<VBox class="sapUiSmallMargin">
+										<f:SimpleForm title="{i18n>formAdd}"
+											layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3"
+											labelSpanM="4" labelSpanS="12" adjustLabelSpan="false"
+											emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0"
+											columnsXL="2" columnsL="1" columnsM="1"
+											singleContainerFullSize="false">
+											<Label text="{i18n>cedula}"
+												tooltip="{i18n>toolTipCedula}" />
+											<MaskInput id="input01" mask="999999999"
+												placeholderSymbol=" " placeholder="{i18n>placeHoldCedula}">
+												<rules>
+													<MaskInputRule />
+												</rules>
+											</MaskInput>
 
-												<Label text="{i18n>nombre}"
-													class="sapUiSmallMarginTopsapUiTinyMarginBottom"
-													tooltip="{i18n>toolTipNombre}" />
-												<MaskInput id="input02" mask="***************"
-													placeholderSymbol=" " placeholder="{i18n>placeHoldNombre}">
-													<rules>
-														<MaskInputRule />
-													</rules>
-												</MaskInput>
+											<Label text="{i18n>nombre}"
+												tooltip="{i18n>toolTipNombre}" />
+											<MaskInput id="input02" mask="***************"
+												placeholderSymbol=" " placeholder="{i18n>placeHoldNombre}">
+												<rules>
+													<MaskInputRule />
+												</rules>
+											</MaskInput>
 
-												<Label text="{i18n>apellidos}"
-													class="sapUiSmallMarginTopsapUiTinyMarginBottom"
-													tooltip="{i18n>toolTipApellidos}" />
-												<MaskInput id="input03"
-													mask="************************" placeholderSymbol=" "
-													placeholder="{i18n>placeHoldApellidos}">
-													<rules>
-														<MaskInputRule />
-													</rules>
-												</MaskInput>
+											<Label text="{i18n>apellidos}"
+												tooltip="{i18n>toolTipApellidos}" />
+											<MaskInput id="input03"
+												mask="************************" placeholderSymbol=" "
+												placeholder="{i18n>placeHoldApellidos}">
+												<rules>
+													<MaskInputRule />
+												</rules>
+											</MaskInput>
 
-												<Label text="{i18n>telefono}"
-													class="sapUiSmallMarginTopsapUiTinyMarginBottom"
-													tooltip="{i18n>toolTipTelefono}" />
-												<MaskInput id="input04" mask="99999999"
-													placeholderSymbol=" "
-													placeholder="{i18n>placeHoldTelefono}">
-													<rules>
-														<MaskInputRule />
-													</rules>
-												</MaskInput>
+											<Label text="{i18n>telefono}"
+												tooltip="{i18n>toolTipTelefono}" />
+											<MaskInput id="input04" mask="99999999"
+												placeholderSymbol=" " placeholder="{i18n>placeHoldTelefono}">
+												<rules>
+													<MaskInputRule />
+												</rules>
+											</MaskInput>
 
-												<Label text=""
-													class="sapUiSmallMarginTopsapUiTinyMarginBottom "
-													tooltip="" />
-												<Button icon="sap-icon://save" press="onAdd"
-													class="sapUiSmallMarginBottom" width="250px" />
-
-											</f:SimpleForm>
-										</VBox>
-									</l:Grid>
+											<Label text=""
+												class="sapUiSmallMarginTopsapUiTinyMarginBottom " tooltip="" />
+											<Button icon="sap-icon://save" press="onAdd"
+												class="sapUiSmallMarginBottom" width="250px" />
+										</f:SimpleForm>
+									</VBox>
 								</content>
 							</IconTabFilter>
-							<IconTabFilter id="Tab2" text="{i18n>rudContent}">
+							<IconTabFilter id="Tab2" text="{i18n>rudContent}"
+								icon="sap-icon://group" iconColor="Positive">
 								<content>
 									<Table id="table1" headerText=" { i18n>lblRead}"
 										items="{/Personas}">
