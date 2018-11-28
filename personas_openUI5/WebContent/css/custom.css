@@ -1,0 +1,4 @@
+@media screen and (min-width: 665px) {
+.sapUiFormElementLbl>.sapMLabel{
+	padding-top:1rem;	
+}
