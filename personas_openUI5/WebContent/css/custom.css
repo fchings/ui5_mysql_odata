@@ -1,4 +1,9 @@
 @media screen and (min-width: 665px) {
-.sapUiFormElementLbl>.sapMLabel{
-	padding-top:1rem;	
+	.sapUiFormResGridCont>.sapUiFormElementLbl>.sapMLabel{
+		padding-top:1rem;	
+	}
+	
+	.sapUiFormEdit.sapUiFormM .sapUiRLElementWithLabel>.sapUiRFLRow:not(.sapUiRFLCompleteRow)>.sapUiRFLContainer:first-child>.sapUiRFLContainerContent {
+		padding-top:0rem !important;	
+	}
 }

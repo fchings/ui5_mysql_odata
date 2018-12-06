@@ -6,10 +6,6 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 		onInit : function() {
 		},
 
-		_peopleTrim : function(p) {
-			return p.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,").replace(/\s+/g,");
-		},
-
 		onAdd : function() {
 			var oModel = this.getView().getModel();
 
@@ -48,7 +44,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 			var src = oEvent.getSource();
 			var path = src.getBindingContext().getPath();
 			var oData = oModel.getProperty(path);
-			var sCedula = oData['cedula'];
+			var sCedula = oData['Cedula'];
 
 			oModel.remove(path, {
 				success : function(oData, oResponse) {
@@ -64,9 +60,9 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast",
 		onUpdate : function(oEvent) {
 			var oModel = this.getView().getModel();
 			var oEntry = {};
-			oEntry.nombre = this._peopleTrim(this.getView().byId("input12").getValue());
-			oEntry.apellidos = this._peopleTrim(this.getView().byId("input13").getValue());
-			oEntry.telefono = this._peopleTrim(this.getView().byId("input14").getValue());
+			oEntry.Nombre = this.getView().byId("input12").getValue();
+			oEntry.Apellidos = this.getView().byId("input13").getValue();
+			oEntry.Telefono = this.getView().byId("input14").getValue();
 
 			var sCedula = this.getView().byId("input11").getText();
 			var path = this.getView().byId("myModel").getText();
